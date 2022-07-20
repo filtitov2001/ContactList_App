@@ -11,20 +11,21 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
-    var contacts: [Contact]!
+    var contacts: [Person]!
 
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        contacts.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "First", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "first", for: indexPath)
+        let contact = contacts[indexPath.row]
 
         var contentView = cell.defaultContentConfiguration()
-        contentView.text = contacts[indexPath.row].fullName
+        contentView.text = contact.fullName
         
         cell.contentConfiguration = contentView
 

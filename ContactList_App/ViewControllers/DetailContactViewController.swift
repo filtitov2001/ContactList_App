@@ -14,7 +14,7 @@ class DetailContactViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-    var contact: Contact!
+    var contact: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
